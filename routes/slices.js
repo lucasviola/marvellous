@@ -29,7 +29,7 @@ exports.findAll = function(req, res){
 	});	
 	
 };
-
+/*
 exports.findById = function(req, res){
 	var id = req.params.id;
 	console.log('Retrieving slice: ' + id);
@@ -39,7 +39,7 @@ exports.findById = function(req, res){
 		});	
 		
 	});
-};
+};*/
 
 exports.addSlice = function(req, res){
 	var slice = req.body;
