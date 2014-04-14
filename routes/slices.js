@@ -13,7 +13,7 @@ db.open(function(err, db){
 		db.collection('slices', {strict: true}, function(err, collection){
 			if(err){
 				console.log("The 'slices' connection doesn't exist. Creating it with sample data...");
-				populateDB();
+				populateDB(); //SHOULD delete this
 			}	
 		});	
 		
@@ -36,9 +36,10 @@ exports.findById = function(req, res){
 	db.collection('slices', function(err, collection){
 		collection.findOne({'_id': new BSON.ObjectID(id)}, function(err, item){
 			res.send(item);
-			});	
+		});	
 		
-		});
+	});
+};
 
 exports.addSlice = function(req, res){
 	var slice = req.body;
@@ -89,7 +90,7 @@ exports.deleteSlice = function(req, res){
 }
 /* --------------------------------------------------------------------------------------------------- */
 
-//MUST delete this
+//SHOULD delete this
 var populateDB = function(){
 
 	var slices = [
@@ -103,9 +104,4 @@ var populateDB = function(){
 	db.collection('slices', function(err, collection){
 		collection.insert(slices, {safe:true}, function(err, result){});
 	});
-};
-
-
-
-
 };
