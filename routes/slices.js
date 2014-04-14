@@ -41,7 +41,7 @@ exports.findById = function(req, res){
 		});
 
 exports.addSlice = function(req, res){
-	var wine = req.body;
+	var slice = req.body;
 	console.log('Adding slice: ' + JSON.stringify(slice));
 	db.collection('slices', function(err, collection){
 		collection.insert(slice, {safe:true}, function(err, result){
@@ -60,7 +60,7 @@ exports.updateSlice = function(req, res){
 	var slice = req.body;
 	console.log('Updating slice: ' + id);
 	console.log(JSON.stringify(slice));
-	db.collection('wines', function(err, collection){
+	db.collection('slices', function(err, collection){
 		collection.update({'_id':new BSON.ObjectID(id)}, slice, {safe:true}, function(err, result){
 			if(err){
 				console.log('Error updating slice: ' + err);
