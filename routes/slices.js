@@ -87,5 +87,25 @@ exports.deleteSlice = function(req, res){
 		});
 	});
 }
+/* --------------------------------------------------------------------------------------------------- */
+
+//MUST delete this
+var populateDB = function(){
+
+	var slices = [
+	{
+		name: "Github",
+		desc: "Build software. Better. Together.",
+		url: "http://github.com",
+		thumbnail: "github.jpg"
+	}];
+
+	db.collection('slices', function(err, collection){
+		collection.insert(slices, {safe:true}, function(err, result){});
+	});
+};
+
+
+
 
 };
