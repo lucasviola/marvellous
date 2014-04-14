@@ -35,6 +35,9 @@ app.get('/', routes.index);
 
 app.get('/slices', slices.findAll);
 app.get('/slices/:id', slices.findById);
+app.post('/slices', slices.addSlice);
+app.put('/slices/:id', slices.updateSlice);
+app.delete('/slices/:id', slices.deleteSlice);
 
 app.listen(1337, function(){
   console.log("Express server listening on port %d in %s mode", app.address().port, app.settings.env);
