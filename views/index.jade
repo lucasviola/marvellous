@@ -1,19 +1,24 @@
-- var logoImg = "../images/logo.png"
-- var introImg = "../images/home.png"
+- var pathToImg = "../images/"
+
 
 nav
 	div#logo
-		img(src=logoImg alt='Marvellous!' height='100')
+		img.logo(src=pathToImg + 'logo.png' alt='Marvellous!' )
+
+h1.title What can you do with Marvellous?
 
 section
-	h1.title What can you do with Marvellous?
-	article
-		img(src='' alt='Index your favorite web sites' height='')
-		h2 Lorem Ipsum dolor sit amet.
-	article
-		img(src='' alt='Check them later' height='')
-		h2 Lorem Ipsum dolor sit amet.
-	article
-		img(src='' alt='Check your newsfeed' height='')
-		h2 Lorem Ipsum dolor sit amet.
+	
+	figure
+		img(src=pathToImg + 'indexWeb.png' alt='Index your favorite web sites' height='')
+		figcaption Lorem Ipsum dolor sit amet.
+	figure
+		img(src=pathToImg + 'feedWeb.png' alt='Check them later' height='')
+		figcaption Lorem Ipsum dolor sit amet.
+	figure
+		img(src=pathToImg + 'indexWeb.png' alt='Check your newsfeed' height='')
+		figcaption Lorem Ipsum dolor sit amet.
+
+button.tryIt(name='tryIt') Try the Beta Version!
+
 
