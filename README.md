@@ -1,4 +1,4 @@
-#### Hey, this is an Alpha Version.
+#### Hey, this is in an early development stage. Patience, young Padawan. I'm still working on this.
 
 # Marvellous
 _Savour your favorite web slices! Or maybe just save them for later._
